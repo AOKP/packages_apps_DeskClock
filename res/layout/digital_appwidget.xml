@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/digital_appwidget"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="right"
+    android:gravity="center_horizontal"
     android:orientation="vertical" >
-
-    <LinearLayout
-        android:id="@+id/LinearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
         <ImageView
             android:id="@+id/timeDisplayImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left" />
-
+            android:layout_gravity="right"/>
+
         <TextView
             android:id="@+id/am_pm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:paddingLeft="4dip"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:singleLine="true"
             android:ellipsize="none"
+            android:paddingLeft="4dip"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ampm_text_color"
             android:textSize="@dimen/ampm_text_size"
-            android:textColor="@color/ampm_text_color" />
+            android:gravity="bottom|left" 
+            android:layout_alignBottom="@id/timeDisplayImage" 
+            android:layout_toRightOf="@id/timeDisplayImage"/>
         
-    </LinearLayout>
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/time_text_color"
         android:textSize="@dimen/date_text_size" />
 

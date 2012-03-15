@@ -16,12 +16,14 @@
 
 package com.android.deskclock;
 
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.widget.RemoteViews;
 
 /**
  * Simple widget to show digital clock.
@@ -52,6 +54,16 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         if (DEBUG)
             Log.d(TAG, "ACTION_APPWIDGET_UPDATE");
 
+        RemoteViews views = new RemoteViews(context.getPackageName(),
+                R.layout.digital_appwidget);
+
+        views.setOnClickPendingIntent(R.id.digital_appwidget,
+                PendingIntent.getActivity(context, 0,
+                    new Intent(context, AlarmClock.class), 0));
+
+        AppWidgetManager gm = AppWidgetManager.getInstance(context);
+        gm.updateAppWidget(appWidgetIds, views);
+        
         // Get all ids
         ComponentName thisWidget = new ComponentName(context,
                 DigitalAppWidgetProvider.class);

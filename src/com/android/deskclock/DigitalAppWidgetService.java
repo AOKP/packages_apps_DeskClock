@@ -32,8 +32,10 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Align;
+import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Handler;
 import android.os.IBinder;
@@ -93,13 +95,13 @@ public class DigitalAppWidgetService extends Service {
         density = this.getResources().getDisplayMetrics().densityDpi;
 
         paint = new TextPaint();
-        
+
         File f = new File(SYSTEM_FONT_TIME_BACKGROUND);
         if (f.exists()) {
             clock = Typeface.createFromFile(SYSTEM_FONT_TIME_BACKGROUND);
             paint.setTypeface(clock);
         }
-        
+
         paint.setAntiAlias(true);
         paint.setSubpixelText(true);
         paint.setFilterBitmap(true);
@@ -108,7 +110,7 @@ public class DigitalAppWidgetService extends Service {
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(getResources().getColor(R.color.time_text_color));
         paint.setTextSize((int) (92 * densityMultiplier));
-        paint.setTextAlign(Align.CENTER);
+        paint.setTextAlign(Align.RIGHT);
     }
 
     @Override
@@ -117,17 +119,6 @@ public class DigitalAppWidgetService extends Service {
 
         if (DEBUG)
             Log.d(TAG, "Service Started");
-
-        RemoteViews views = new RemoteViews(this.getApplicationContext()
-                .getPackageName(), R.layout.digital_appwidget);
-
-        // Register an onClickListener
-        Intent clickIntent = new Intent(this.getApplicationContext(),
-                AlarmClock.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(
-                getApplicationContext(), 0, clickIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT);
-        views.setOnClickPendingIntent(R.id.digital_appwidget, pendingIntent);
 
         String[] ampm = new DateFormatSymbols().getAmPmStrings();
         mAmString = ampm[0];
@@ -203,8 +194,18 @@ public class DigitalAppWidgetService extends Service {
 
     public Bitmap createTimeBitmap(CharSequence time) {
 
-        Bitmap myBitmap = Bitmap.createBitmap((int) (240 * densityMultiplier),
-                (int) (54 * densityMultiplier), Bitmap.Config.ARGB_8888);
+        Rect bounds = new Rect();
+        paint.getTextBounds("00:00", 0, 5, bounds);
+
+        Bitmap myBitmap = Bitmap.createBitmap(bounds.width() + (int) (2 * densityMultiplier),
+                bounds.height() + (int) (2 * densityMultiplier), Bitmap.Config.ARGB_8888);
+
+        // Bitmap myBitmap = Bitmap.createBitmap((int) (240 *
+        // densityMultiplier),
+        // (int) (54 * densityMultiplier), Bitmap.Config.ARGB_8888);
+
+        if (DEBUG)
+            myBitmap.eraseColor(Color.DKGRAY);
 
         if (DEBUG) {
             Log.d(TAG, "density: " + density);
@@ -222,8 +223,8 @@ public class DigitalAppWidgetService extends Service {
 
         Canvas myCanvas = new Canvas(myBitmap);
 
-        myCanvas.drawText(time, 0, time.length(), (int) (120 * densityMultiplier),
-                (int) (50 * densityMultiplier), paint);
+        myCanvas.drawText(time, 0, time.length(), bounds.width(),
+                bounds.height(), paint);
 
         return myBitmap;
     }
