@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-sdk android:minSdkVersion="14"/>
 
     <application android:label="@string/app_label"
                  android:icon="@mipmap/ic_launcher_alarmclock">
@@ -129,6 +130,16 @@
             <meta-data android:name="android.appwidget.oldName" android:value="com.android.deskclock.AnalogAppWidgetProvider" />
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/analog_appwidget" />
         </receiver>
+        
+        <receiver android:name=".DigitalAppWidgetProvider" android:label="@string/digital_gadget"
+        	android:icon="@mipmap/ic_widget_digital_clock">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			    <action android:name="android.appwidget.action.APPWIDGET_DISABLED" />
+			</intent-filter>
+            <meta-data android:name="android.appwidget.oldName" android:value="com.android.deskclock.DigitalAppWidgetProvider" />
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/digital_appwidget" />
+        </receiver>
 
         <activity android:name=".Screensaver"
             android:label="@string/app_label"
@@ -141,6 +152,7 @@
                 <category android:name="android.intent.category.DREAM" />
             </intent-filter>
         </activity>
+        <service android:name=".DigitalAppWidgetService"></service>
     </application>
 </manifest>
 
