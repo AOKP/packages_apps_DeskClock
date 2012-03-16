@@ -31,7 +31,7 @@ import android.widget.RemoteViews;
 public class DigitalAppWidgetProvider extends AppWidgetProvider {
 
     static final String TAG = "DigitalAppWidgetProvider";
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = true;
 
     @Override
     public void onDisabled(Context context) {
@@ -56,10 +56,6 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
 
         RemoteViews views = new RemoteViews(context.getPackageName(),
                 R.layout.digital_appwidget);
-
-        views.setOnClickPendingIntent(R.id.digital_appwidget,
-                PendingIntent.getActivity(context, 0,
-                    new Intent(context, AlarmClock.class), 0));
 
         AppWidgetManager gm = AppWidgetManager.getInstance(context);
         gm.updateAppWidget(appWidgetIds, views);

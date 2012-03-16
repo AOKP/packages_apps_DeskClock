@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.DEVICE_POWER" />
-    <uses-sdk android:minSdkVersion="14"/>
+    <uses-sdk android:minSdkVersion="4"/>
 
     <application android:label="@string/app_label"
                  android:icon="@mipmap/ic_launcher_alarmclock">

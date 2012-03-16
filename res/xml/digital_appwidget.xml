@@ -20,5 +20,5 @@
     android:updatePeriodMillis="0"
     android:previewImage="@drawable/preview_digital"
     android:initialLayout="@layout/digital_appwidget"
-    >
+    android:minResizeHeight="72dp" android:minResizeWidth="294dp">
 </appwidget-provider>

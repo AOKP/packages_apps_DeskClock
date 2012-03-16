@@ -53,8 +53,10 @@ public class DigitalAppWidgetService extends Service {
     static final String TAG = "DigitalAppWidgetService";
 
     private static final String SYSTEM = "/system/fonts/";
-    private static final String SYSTEM_FONT_TIME_BACKGROUND = SYSTEM
+    private static final String SYSTEM_FONT_ANDROIDCLOCK = SYSTEM
             + "AndroidClock.ttf";
+    private static final String SYSTEM_FONT_CLOCKOPIA = SYSTEM
+            + "Clockopia.ttf";
 
     private static final boolean DEBUG = false;
     private final static String M12 = "h:mm";
@@ -96,10 +98,16 @@ public class DigitalAppWidgetService extends Service {
 
         paint = new TextPaint();
 
-        File f = new File(SYSTEM_FONT_TIME_BACKGROUND);
+        File f = new File(SYSTEM_FONT_ANDROIDCLOCK);
         if (f.exists()) {
-            clock = Typeface.createFromFile(SYSTEM_FONT_TIME_BACKGROUND);
+            clock = Typeface.createFromFile(SYSTEM_FONT_ANDROIDCLOCK);
             paint.setTypeface(clock);
+        } else {
+            f = new File(SYSTEM_FONT_CLOCKOPIA);
+            if (f.exists()) {
+                clock = Typeface.createFromFile(SYSTEM_FONT_CLOCKOPIA);
+                paint.setTypeface(clock);
+            }
         }
 
         paint.setAntiAlias(true);
@@ -182,6 +190,10 @@ public class DigitalAppWidgetService extends Service {
 
         views.setViewVisibility(R.id.am_pm, mFormat == M12 ? View.VISIBLE
                 : View.GONE);
+        
+        views.setOnClickPendingIntent(R.id.digital_appwidget,
+                PendingIntent.getActivity(this.getApplicationContext(), 0,
+                    new Intent(this.getApplicationContext(), AlarmClock.class), 0));
 
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this
                 .getApplicationContext());
@@ -197,7 +209,7 @@ public class DigitalAppWidgetService extends Service {
         Rect bounds = new Rect();
         paint.getTextBounds("00:00", 0, 5, bounds);
 
-        Bitmap myBitmap = Bitmap.createBitmap(bounds.width() + (int) (2 * densityMultiplier),
+        Bitmap myBitmap = Bitmap.createBitmap(bounds.width() + (int) (5 * densityMultiplier),
                 bounds.height() + (int) (2 * densityMultiplier), Bitmap.Config.ARGB_8888);
 
         // Bitmap myBitmap = Bitmap.createBitmap((int) (240 *
@@ -223,7 +235,7 @@ public class DigitalAppWidgetService extends Service {
 
         Canvas myCanvas = new Canvas(myBitmap);
 
-        myCanvas.drawText(time, 0, time.length(), bounds.width(),
+        myCanvas.drawText(time, 0, time.length(), bounds.width() + (int) (6 * densityMultiplier),
                 bounds.height(), paint);
 
         return myBitmap;
