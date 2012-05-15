@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/analog_aokp_clock"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1.0"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp" >
+
+        <ImageView
+            android:id="@+id/imageViewPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerInside" />
+
+
+        <AnalogClock
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/analogClock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:dial="@drawable/appwidget_aokp_clock_dial"
+            android:hand_hour="@drawable/appwidget_aokp_clock_hour"
+            android:hand_minute="@drawable/appwidget_aokp_clock_minute" />
+
+    </FrameLayout>
+
+    <Gallery
+        android:id="@+id/gallerySelectBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/buttonOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@android:string/ok" />
+
+</LinearLayout>
