@@ -147,10 +147,12 @@
 
     <!-- Label for analog clock gadget, shown in list of all gadgets -->
     <string name="analog_gadget">Analog clock</string>
-    
+
+    <!-- Label for AOKP clock gadget, shown in list of all gadgets -->
+    <string name="analog_aokp_gadget">AOKP clock</string>
+
     <!-- Label for digital clock gadget, shown in list of all gadgets -->
     <string name="digital_gadget">Digital clock</string>
-    
 
     <!-- Menu item title for general Alarm Clock Settings -->
     <string name="settings">Settings</string>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="aokp_clock_backgrounds_name"  translatable="false">        
+        <item>Blue</item>
+        <item>Pink</item>
+        <item>White</item>
+        <item>Full Swagger</item>
+    </array>
+    <array  name="aokp_clock_backgrounds_drawable"  translatable="false">
+        <item>appwidget_aokp_blue_clock_dial</item>        
+        <item>appwidget_aokp_pink_clock_dial</item>
+        <item>appwidget_aokp_white_clock_dial</item>
+        <item>appwidget_aokp_full_clock_dial</item>
+    </array>
+</resources>
