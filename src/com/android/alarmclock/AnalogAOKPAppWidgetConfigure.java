@@ -5,17 +5,28 @@ import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.Spinner;
+import android.widget.Gallery;
 
 import com.android.deskclock.R;
 
-public class AnalogAOKPAppWidgetConfigure extends Activity {
-    private static final boolean DEBUG = true;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+
+public class AnalogAOKPAppWidgetConfigure extends Activity implements AdapterView.OnItemSelectedListener,
+        OnClickListener {
+    private static final boolean DEBUG = false;
 
     private static final String LOG_TAG = "AnalogAOKPAppWidgetConfigure";
 
@@ -26,13 +37,12 @@ public class AnalogAOKPAppWidgetConfigure extends Activity {
 
     int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 
-    String[] clockStyleNames;
-    String[] clockStyleDrawables;
-
     int selectedPos = 0;
 
-    Spinner spinnerClockStyle;
+    Gallery galleryClockStyle;
     ImageView imagePreview;
+
+    private ArrayList<Integer> mImages;
 
     public AnalogAOKPAppWidgetConfigure() {
         super();
@@ -42,14 +52,20 @@ public class AnalogAOKPAppWidgetConfigure extends Activity {
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
+        setTitle(R.string.clock_dial_instructions);
+
         // Set the result to CANCELED.  This will cause the widget host to cancel
         // out of the widget placement if they press the back button.
         setResult(RESULT_CANCELED);
 
+        findClockDials();
+
         setContentView(R.layout.analog_aokp_appwidget_config);
 
-        clockStyleNames = getResources().getStringArray(R.array.aokp_clock_backgrounds_name);
-        clockStyleDrawables = getResources().getStringArray(R.array.aokp_clock_backgrounds_drawable);
+        galleryClockStyle = (Gallery) findViewById(R.id.gallerySelectBackground);
+        galleryClockStyle.setAdapter(new ImageAdapter(this));
+        galleryClockStyle.setOnItemSelectedListener(this);
+        galleryClockStyle.setCallbackDuringFling(false);
 
         // Find the widget id from the intent.
         Intent intent = getIntent();
@@ -60,10 +76,7 @@ public class AnalogAOKPAppWidgetConfigure extends Activity {
         }
 
         // Bind the action for the ok button.
-        findViewById(R.id.buttonOK).setOnClickListener(mOnClickListener);
-
-        spinnerClockStyle = (Spinner) findViewById(R.id.spinnerSelectBackground);
-        spinnerClockStyle.setOnItemSelectedListener(mOnItemSelectedListener);
+        findViewById(R.id.buttonOK).setOnClickListener(this);
 
         imagePreview = (ImageView) findViewById(R.id.imageViewPreview);
 
@@ -74,48 +87,29 @@ public class AnalogAOKPAppWidgetConfigure extends Activity {
 
         selectedPos = loadClockPref(this, mAppWidgetId);
 
-        spinnerClockStyle.setSelection(selectedPos);
+        galleryClockStyle.setSelection(selectedPos);
 
-        int resID = getResources().getIdentifier(clockStyleDrawables[selectedPos], "drawable",
-                getPackageName());
-        if (resID != 0) {
-            imagePreview.setImageDrawable(getResources().getDrawable(resID));
-        }
+        imagePreview.setImageDrawable(getResources().getDrawable(mImages.get(selectedPos)));
     }
 
-    View.OnClickListener mOnClickListener = new View.OnClickListener() {
-        public void onClick(View v) {
-            final Context context = AnalogAOKPAppWidgetConfigure.this;
+    private void findClockDials() {
+        mImages = new ArrayList<Integer>();
 
-            saveClockPref(context, mAppWidgetId, selectedPos);
+        final Resources resources = getResources();
+        final String packageName = getApplication().getPackageName();
 
-            AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-            AnalogAOKPAppWidgetProvider.updateAppWidget(context, appWidgetManager,
-                    mAppWidgetId, clockStyleDrawables[selectedPos]);
+        addClockDials(resources, packageName, R.array.aokp_clock_backgrounds_drawable);
+    }
 
-            Intent resultValue = new Intent();
-            resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mAppWidgetId);
-            setResult(RESULT_OK, resultValue);
-            finish();
-        }
-    };
-
-    AdapterView.OnItemSelectedListener mOnItemSelectedListener = new AdapterView.OnItemSelectedListener() {
-        public void onItemSelected(AdapterView<?> parent,
-            View view, int pos, long id) {
-            if (DEBUG) Log.d(LOG_TAG,"selected item: " + pos);
-            int resID = parent.getResources().getIdentifier(clockStyleDrawables[pos], "drawable",
-                parent.getContext().getPackageName());
-            if (resID != 0) {
-                imagePreview.setImageDrawable(parent.getResources().getDrawable(resID));
+    private void addClockDials(Resources resources, String packageName, int list) {
+        final String[] extras = resources.getStringArray(list);
+        for (String extra : extras) {
+            int res = resources.getIdentifier(extra, "drawable", packageName);
+            if (res != 0) {
+                mImages.add(res);
             }
-            selectedPos = pos;
         }
-
-        public void onNothingSelected(AdapterView parent) {
-          // Do nothing.
-        }
-    };
+    }
 
     @Override
     public void onPause() {
@@ -127,6 +121,7 @@ public class AnalogAOKPAppWidgetConfigure extends Activity {
     @Override
     public void onStop() {
         super.onStop();
+        if (DEBUG) Log.d(LOG_TAG, "onStop");
 
     }
 
@@ -135,6 +130,76 @@ public class AnalogAOKPAppWidgetConfigure extends Activity {
         super.onResume();
         if (DEBUG) Log.d(LOG_TAG, "onResume");
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (DEBUG) Log.d(LOG_TAG, "onDestroy");
+
+    }
+
+    public void onItemSelected(AdapterView parent, View v, int position, long id) {
+        selectedPos = position;
+        imagePreview.setImageDrawable(parent.getResources().getDrawable(mImages.get(selectedPos)));
+    }
+
+    public void onNothingSelected(AdapterView parent) {
+    }
+
+    private class ImageAdapter extends BaseAdapter {
+        private LayoutInflater mLayoutInflater;
+
+        ImageAdapter(AnalogAOKPAppWidgetConfigure context) {
+            mLayoutInflater = context.getLayoutInflater();
+        }
+
+        public int getCount() {
+            return mImages.size();
+        }
+
+        public Object getItem(int position) {
+            return position;
+        }
+
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ImageView image;
+
+            if (convertView == null) {
+                image = (ImageView) mLayoutInflater.inflate(R.layout.analog_aokp_appwidget_config_dial_item, parent, false);
+            } else {
+                image = (ImageView) convertView;
+            }
+
+            int imageRes = mImages.get(position);
+            image.setImageResource(imageRes);
+            Drawable imageDrawable = image.getDrawable();
+            if (imageDrawable != null) {
+                imageDrawable.setDither(true);
+            } else {
+                Log.e(LOG_TAG, String.format(
+                    "Error decoding image resId=%d for wallpaper #%d",
+                    imageRes, position));
+            }
+            return image;
+        }
+    }
+
+    public void onClick(View v) {
+        saveClockPref(this, mAppWidgetId, selectedPos);
+        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
+
+        AnalogAOKPAppWidgetProvider.updateAppWidget(this, appWidgetManager,
+            mAppWidgetId, mImages.get(selectedPos));
+
+        Intent resultValue = new Intent();
+        resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mAppWidgetId);
+        setResult(RESULT_OK, resultValue);
+        finish();
     }
 
     // Write the clock style to the SharedPreferences object for this widget

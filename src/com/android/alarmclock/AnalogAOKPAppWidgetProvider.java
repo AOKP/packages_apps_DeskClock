@@ -32,13 +32,15 @@ import android.widget.RemoteViews;
  * Simple widget to show analog clock.
  */
 public class AnalogAOKPAppWidgetProvider extends AppWidgetProvider {
+    private static final boolean DEBUG = false;
+
     static final String TAG = "AnalogAOKPAppWidgetProvider";
 
     static String[] clockStyleDrawables;
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        Log.d(TAG, "onUpdate");
+        if (DEBUG) Log.d(TAG, "onUpdate");
 
         final int N = appWidgetIds.length;
 
@@ -47,13 +49,16 @@ public class AnalogAOKPAppWidgetProvider extends AppWidgetProvider {
         for (int i=0; i<N; i++) {
             int selectedPos = AnalogAOKPAppWidgetConfigure.loadClockPref(context, appWidgetIds[i]);
 
-            updateAppWidget(context, appWidgetManager, appWidgetIds[i], clockStyleDrawables[selectedPos]);
+            int resID = context.getResources().getIdentifier(clockStyleDrawables[selectedPos], "drawable",
+                context.getPackageName());
+
+            updateAppWidget(context, appWidgetManager, appWidgetIds[i], resID);
         }
     }
 
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
-        Log.d(TAG, "onDeleted");
+        if (DEBUG) Log.d(TAG, "onDeleted");
 
         final int N = appWidgetIds.length;
         for (int i=0; i<N; i++) {
@@ -63,17 +68,17 @@ public class AnalogAOKPAppWidgetProvider extends AppWidgetProvider {
 
     @Override
     public void onEnabled(Context context) {
-        Log.d(TAG, "onEnabled");
+        if (DEBUG) Log.d(TAG, "onEnabled");
     }
 
     @Override
     public void onDisabled(Context context) {
-        Log.d(TAG, "onDisabled");
+        if (DEBUG) Log.d(TAG, "onDisabled");
     }
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
-            int appWidgetId, String clockDialBackground) {
-        Log.d(TAG, "updateAppWidget appWidgetId=" + appWidgetId);
+            int appWidgetId, int resID) {
+        if (DEBUG) Log.d(TAG, "updateAppWidget appWidgetId=" + appWidgetId);
 
         RemoteViews views = new RemoteViews(context.getPackageName(),
             R.layout.analog_aokp_appwidget);
@@ -81,10 +86,6 @@ public class AnalogAOKPAppWidgetProvider extends AppWidgetProvider {
         views.setOnClickPendingIntent(R.id.analog_aokp_appwidget,
                 PendingIntent.getActivity(context, 0,
                     new Intent(context, AlarmClock.class), 0));
-
-        int resID = context.getResources().getIdentifier(clockDialBackground, "drawable",
-                context.getPackageName());
-        Log.d(TAG, "updateAppWidget resID=" + resID);
 
         if (resID != 0) {
             views.setInt(R.id.imageViewClockDial, "setImageResource", resID);
