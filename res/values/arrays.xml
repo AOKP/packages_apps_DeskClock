@@ -8,5 +8,8 @@
         <item>appwidget_aokp_blue_light_clock_dial</item>
         <item>appwidget_aokp_letters_clock_dial</item>
         <item>appwidget_aokp_blue_letters_clock_dial</item>
+        <item>appwidget_aokp_blue_letters2_clock_dial</item>
+        <item>appwidget_aokp_big_blue_unicorn_clock_dial</item>
+        <item>appwidget_aokp_jelly_clock_dial</item>
     </string-array>
 </resources>
