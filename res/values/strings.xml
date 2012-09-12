@@ -158,6 +158,11 @@
     <!-- Label for digital clock gadget, shown in list of all gadgets -->
     <string name="digital_gadget">Digital clock</string>
 
+    <!-- Label for the digital clock color settings -->
+    <string name="clock_color_title">Clock color</string>
+    <!-- Label for the digital clock color settings summary -->
+    <string name="clock_color_summary">Set the color of the digital clock widget.</string>
+
     <!-- Menu item title for general Alarm Clock Settings -->
     <string name="settings">Settings</string>
 
@@ -313,6 +318,16 @@
 
     <!-- Label on the main screen control used to set alarm when there is already an existing alarm [CHAR LIMIT=30]-->
     <string name="control_set_alarm_with_existing">Alarm set: <xliff:g id="time">%s</xliff:g></string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on Color to apply</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">Set</string>
+    <string name="ics_color">Holo</string>
 
 </resources>
 
