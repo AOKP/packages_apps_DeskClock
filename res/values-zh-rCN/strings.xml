@@ -59,6 +59,11 @@
     <string name="day_concat" msgid="971998564991636532">", "</string>
     <string name="clock_instructions" msgid="2656876819515011590">"选择时钟"</string>
     <string name="analog_gadget" msgid="1670505720837152766">"模拟时钟"</string>
+    <string name="analog_aokp_gadget">AOKP 时钟</string>
+    <string name="clock_dial_instructions">选择钟表盘</string>
+    <string name="digital_gadget">数字时钟</string>
+    <string name="clock_color_title">时钟颜色</string>
+    <string name="clock_color_summary">为数字时钟小部件设置颜色</string>
     <string name="settings" msgid="5849739030579520686">"设置"</string>
     <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"静音模式下闹钟响"</string>
     <string name="alarm_in_silent_mode_summary" msgid="123772279768441207">"设备处于静音模式时，闹钟仍会响"</string>
@@ -127,4 +132,9 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"正在载入铃声..."</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"设置闹钟"</string>
     <string name="control_set_alarm_with_existing" msgid="1128169496817859490">"设置的闹钟时间：<xliff:g id="TIME">%s</xliff:g>"</string>
+
+    <string name="dialog_color_picker">颜色选择器</string>
+    <string name="press_color_to_apply">点击颜色应用</string>
+    <string name="set">设置</string>
+    <string name="ics_color">默认</string>
 </resources>
