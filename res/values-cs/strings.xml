@@ -251,4 +251,5 @@
   <string name="math_dialog">Jsi probuzen?</string>
   <string name="increasing_volume_title">Zesilující se hlasitost</string>
   <string name="increasing_volume_summary">Zvolit nejvyšší možnou hlasitost</string>
+  <string name="alarm_incvol">Vzrůstající hlasitost</string>
 </resources>
