@@ -48,6 +48,8 @@ public class SettingsActivity extends PreferenceActivity
 
     static final String KEY_ALARM_IN_SILENT_MODE =
             "alarm_in_silent_mode";
+    static final String KEY_SHOW_STATUS_BAR_ICON =
+            "show_status_bar_icon";
     static final String KEY_ALARM_SNOOZE =
             "snooze_duration";
     static final String KEY_VOLUME_BEHAVIOR =
@@ -185,6 +187,10 @@ public class SettingsActivity extends PreferenceActivity
             update.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
             update.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, widgetIds);
             getApplicationContext().sendBroadcast(update);
+        } else if (KEY_SHOW_STATUS_BAR_ICON.equals(pref.getKey())) {
+            // Check if any alarms are active. If yes and
+            // we allow showing the alarm icon, the icon will be shown.
+            Alarms.updateStatusBarIcon(getApplicationContext(), (Boolean) newValue);
         }
         return true;
     }
@@ -220,6 +226,9 @@ public class SettingsActivity extends PreferenceActivity
         listPref = (ListPreference) findPreference(KEY_VOLUME_BUTTONS);
         listPref.setSummary(listPref.getEntry());
         listPref.setOnPreferenceChangeListener(this);
+
+        CheckBoxPreference hideStatusbarIcon = (CheckBoxPreference) findPreference(KEY_SHOW_STATUS_BAR_ICON);
+        hideStatusbarIcon.setOnPreferenceChangeListener(this);
 
         ColorPickerPreference clockTimeColor = (ColorPickerPreference) findPreference(KEY_DIGITAL_CLOCK_TIME_COLOR);
         clockTimeColor.setOnPreferenceChangeListener(this);
