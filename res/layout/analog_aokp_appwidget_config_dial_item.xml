@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?android:attr/galleryItemBackground"
+    android:layout_width="125dp"
+    android:layout_height="125dp"
+    android:scaleType="fitCenter"
+    android:adjustViewBounds="false"
+    android:focusable="true" />
