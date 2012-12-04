@@ -324,4 +324,20 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Chcete toto město odebrat?"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"Načítání"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Digitální hodiny"</string>
+    <string name="analog_aokp_gadget">AOKP hodiny</string>
+    <string name="clock_dial_instructions">Vybrat číselník hodin</string>
+    <string name="dialog_color_picker">Výběr barvy</string>
+    <string name="press_color_to_apply">Barva se použije po jejím stisku</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">Nastavit</string>
+    <string name="ics_color">Holo</string>
+    <string name="clock_time_color_title">Barva času</string>
+    <string name="clock_time_color_summary">Nastavit barvu času na widgetu digitálních hodin.</string>
+    <string name="clock_date_color_title">Barva data</string>
+    <string name="clock_date_color_summary">Nastavit barvu data na widgetu digitálních hodin.</string>
+    <string name="clock_alarm_color_title">Barva budíku</string>
+    <string name="clock_alarm_color_summary">Nastavit barvu budíku na widgetu digitálních hodin.</string>
 </resources>
