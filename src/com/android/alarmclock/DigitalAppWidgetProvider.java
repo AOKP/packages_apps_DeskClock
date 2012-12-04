@@ -23,8 +23,10 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
@@ -42,6 +44,8 @@ import java.util.Calendar;
 
 public class DigitalAppWidgetProvider extends AppWidgetProvider {
     private static final String TAG = "DigitalAppWidgetProvider";
+
+    private SharedPreferences mPrefs;
 
     public DigitalAppWidgetProvider() {
     }
@@ -76,6 +80,8 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
                 PendingIntent.getActivity(c, 0, new Intent(c, DeskClock.class), 0));
         refreshAlarm(c, widget);
         WidgetUtils.setClockSize(c, widget, ratio);
+        mPrefs =  PreferenceManager.getDefaultSharedPreferences(c);
+        WidgetUtils.setClockColor(c, widget, mPrefs);
         final Intent intent = new Intent(c, DigitalAppWidgetService.class);
         intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
         intent.setData(Uri.parse(intent.toUri(Intent.URI_INTENT_SCHEME)));
