@@ -20,5 +20,6 @@
     android:updatePeriodMillis="0"
     android:previewImage="@drawable/appwidget_analog_clock_preview"
     android:initialLayout="@layout/analog_appwidget"
+    android:widgetCategory="keyguard|home_screen"
     >
 </appwidget-provider>
