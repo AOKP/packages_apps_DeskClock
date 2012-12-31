@@ -324,4 +324,20 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"是否删除此城市？"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"正在加载"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"数字时钟"</string>
+
+    <string name="dialog_color_picker">颜色选择器</string>
+    <string name="press_color_to_apply">点击颜色应用</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">设置</string>
+    <string name="ics_color">默认</string>
+
+    <string name="clock_time_color_title">时间颜色</string>
+    <string name="clock_time_color_summary">设置使用数字时钟小部件时的时间颜色。</string>
+    <string name="clock_date_color_title">日期颜色</string>
+    <string name="clock_date_color_summary">设置使用数字时钟小部件时的日期颜色。</string>
+    <string name="clock_alarm_color_title">闹钟颜色</string>
+    <string name="clock_alarm_color_summary">设置使用数字时钟小部件时的闹钟颜色。</string>
 </resources>
