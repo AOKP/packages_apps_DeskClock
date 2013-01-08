@@ -96,6 +96,7 @@ public class ScreensaverActivity extends Activity {
 
             if (changed) {
                 Utils.refreshAlarm(ScreensaverActivity.this, mContentView);
+                Utils.updateColors(ScreensaverActivity.this, mContentView);
             }
 
         }
@@ -211,6 +212,7 @@ public class ScreensaverActivity extends Activity {
 
         Utils.updateDate(mDateFormat, mDateFormatForAccessibility,mContentView);
         Utils.refreshAlarm(ScreensaverActivity.this, mContentView);
+        Utils.updateColors(ScreensaverActivity.this, mContentView);
     }
 
 }

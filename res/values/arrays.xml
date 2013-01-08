@@ -4,6 +4,7 @@
         <item>appwidget_aokp_color_clock_dial</item>
         <item>appwidget_aokp_white_clock_dial</item>
         <item>appwidget_aokp_black_clock_dial</item>
+        <item>appwidget_aokp_grey_clock_dial</item>
         <item>appwidget_aokp_white_cogclock_dial</item>
     </string-array>
 </resources>

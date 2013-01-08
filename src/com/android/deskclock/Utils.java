@@ -81,6 +81,7 @@ public class Utils {
     public final static String HOURS = "h";
     public final static String MINUTES = ":mm";
 
+    private SharedPreferences sharedPref;
 
     public static void prepareHelpMenuItem(Context context, MenuItem helpMenuItem) {
         String helpUrlString = context.getResources().getString(R.string.desk_clock_help_url);
@@ -387,6 +388,26 @@ public class Utils {
             dateDisplay.setVisibility(View.VISIBLE);
             dateDisplay.setText(newDate);
             dateDisplay.setContentDescription(DateFormat.format(dateFormatForAccessibility, cal));
+        }
+    }
+
+    /** Clock views can call this to update their text colors. **/
+    public static void updateColors(Context context, View clock) {
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        int colorDate = sharedPref.getInt("digital_clock_date_color",
+            context.getResources().getColor(R.color.clock_white));
+        TextView dateDisplay;
+        dateDisplay = (TextView) clock.findViewById(R.id.date);
+        if (dateDisplay != null) {
+            dateDisplay.setTextColor(colorDate);
+        }
+
+        int colorAlarm = sharedPref.getInt("digital_clock_alarm_color",
+            context.getResources().getColor(R.color.clock_gray));
+        TextView nextAlarmView;
+        nextAlarmView = (TextView) clock.findViewById(R.id.nextAlarm);
+        if (nextAlarmView != null) {
+            nextAlarmView.setTextColor(colorAlarm);
         }
     }
 
