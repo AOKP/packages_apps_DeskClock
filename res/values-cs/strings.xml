@@ -335,11 +335,11 @@
     <string name="set">Nastavit</string>
     <string name="ics_color">Holo</string>
     <string name="clock_time_color_title">Barva času</string>
-    <string name="clock_time_color_summary">Nastavit barvu času na widgetu digitálních hodin.</string>
+    <string name="clock_time_color_summary">Nastavit barvu času digitálních hodin.</string>
     <string name="clock_date_color_title">Barva data</string>
-    <string name="clock_date_color_summary">Nastavit barvu data na widgetu digitálních hodin.</string>
+    <string name="clock_date_color_summary">Nastavit barvu data digitálních hodin.</string>
     <string name="clock_alarm_color_title">Barva budíku</string>
-    <string name="clock_alarm_color_summary">Nastavit barvu budíku na widgetu digitálních hodin.</string>
+    <string name="clock_alarm_color_summary">Nastavit barvu budíku digitálních hodin.</string>
     <string name="show_status_bar_icon_title">Zobrazit ikonu</string>
     <string name="show_status_bar_icon_summary">Zobrazit ikonu v notifikační liště když je budík nastaven</string>
 </resources>
