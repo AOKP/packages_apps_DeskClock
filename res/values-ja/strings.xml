@@ -324,4 +324,41 @@
     <string name="city_delete_confirmation" msgid="1783441538785676299">"この都市を削除しますか？"</string>
     <string name="widget_loading_ms" msgid="790841709484678848">"読み込み中"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"デジタルクロック"</string>
+
+    <!-- Label for AOKP clock gadget, shown in list of all gadgets -->
+    <string name="analog_aokp_gadget">AOKP時計</string>
+
+    <!-- Appears at the top of the AOKP Clock Picker screen: Tell user to
+         select a clock Dial to display -->
+    <string name="clock_dial_instructions">時計のダイヤルを選択</string>
+
+    <!-- Setting title for showing/hiding the alarm status bar icon -->
+    <string name="show_status_bar_icon_title">アイコンを表示</string>
+
+    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+    <string name="show_status_bar_icon_summary">アラームが設定されているとき、ステータスバーにアイコンを表示する</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">色選択</string>
+    <string name="press_color_to_apply">色をタップして適用</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">16進:</string>
+    <string name="hex_hint">\#FF000000</string>
+    <string name="set">Set</string>
+    <string name="ics_color">Holo</string>
+
+    <!-- Label for the digital clock time color settings -->
+    <string name="clock_time_color_title">時間の色</string>
+    <!-- Label for the digital clock time color settings summary -->
+    <string name="clock_time_color_summary">デジタルクロックの時間の色を設定する</string>
+    <!-- Label for the digital clock date color settings -->
+    <string name="clock_date_color_title">日付の色</string>
+    <!-- Label for the digital clock date color settings summary -->
+    <string name="clock_date_color_summary">デジタルクロックの日付の色を設定する</string>
+    <!-- Label for the digital clock alarm color settings -->
+    <string name="clock_alarm_color_title">アラームの色</string>
+    <!-- Label for the digital clock alarm color settings summary -->
+    <string name="clock_alarm_color_summary">デジタルクロックのアラームの色を設定する</string>
+
 </resources>
