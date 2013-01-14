@@ -69,6 +69,8 @@
     <string name="analog_gadget" msgid="1670505720837152766">"指针时钟"</string>
     <string name="help" msgid="7786263119482654015">"帮助"</string>
     <string name="settings" msgid="5849739030579520686">"设置"</string>
+    <string name="show_status_bar_icon_title">显示图标</string>
+    <string name="show_status_bar_icon_summary">当设有闹钟时在状态栏显示图标</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"暂停时长"</string>
   <plurals name="snooze_duration">
     <item quantity="one" msgid="7406963706727564418">"1 分钟"</item>
@@ -335,9 +337,9 @@
     <string name="ics_color">默认</string>
 
     <string name="clock_time_color_title">时间颜色</string>
-    <string name="clock_time_color_summary">设置使用数字时钟小部件时的时间颜色。</string>
+    <string name="clock_time_color_summary">设置使用数字时钟时的时间颜色。</string>
     <string name="clock_date_color_title">日期颜色</string>
-    <string name="clock_date_color_summary">设置使用数字时钟小部件时的日期颜色。</string>
+    <string name="clock_date_color_summary">设置使用数字时钟时的日期颜色。</string>
     <string name="clock_alarm_color_title">闹钟颜色</string>
-    <string name="clock_alarm_color_summary">设置使用数字时钟小部件时的闹钟颜色。</string>
+    <string name="clock_alarm_color_summary">设置使用数字时钟时的闹钟颜色。</string>
 </resources>
