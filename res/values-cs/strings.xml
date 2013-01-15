@@ -350,4 +350,15 @@
     <string name="show_status_bar_icon_summary">Zobrazit ikonu v notifikační liště když je nastaven budík</string>
     <string name="unlock_on_dismiss_title">Odemknout při zrušení budíku</string>
     <string name="unlock_on_dismiss_summary">Pokud je zatrženo, po zrušení budíku ze zamknuté obrazovky dojde k odemčení zařízení</string>
+    <string name="flip_action_title">Akce otočení</string>
+    <string name="flip_action_dialog_title">Akce otočení</string>
+    <string name="flip_action_summary">Otočení zařízení <xliff:g id="action">%s</xliff:g></string>
+    <string-array name="flip_action_entries">
+        <item>neudělá nic</item>
+        <item>odloží budík</item>
+        <item>zruší budík</item>
+    </string-array>
+    <string name="shake_title">Zatřesení</string>
+    <string name="shake_summary">Zatřesení zařízením <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_dialog">Zatřesení zařízením\u2026</string>
 </resources>
