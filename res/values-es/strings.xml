@@ -330,4 +330,5 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"¿Eliminar este temporizador?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"¿Eliminar esta ciudad?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Reloj digital"</string>
+    <string name="alarm_increasing_volume">Volumen ascendente</string>
 </resources>

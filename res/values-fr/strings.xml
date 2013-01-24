@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--  Copyright (C) 2007 The Android Open Source Project
+      Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -330,4 +331,5 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Supprimer ce minuteur ?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Supprimer cette ville ?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Horloge numérique"</string>
+    <string name="alarm_increasing_volume">Volume progressif</string>
 </resources>

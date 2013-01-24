@@ -476,6 +476,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
             ViewGroup[] dayButtonParents = new ViewGroup[7];
             ToggleButton[] dayButtons = new ToggleButton[7];
             CheckBox vibrate;
+            CheckBox increasingVolume;
             ViewGroup collapse;
             TextView ringtone;
             View hairLine;
@@ -606,6 +607,7 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                 holder.dayButtonParents[i] = viewgroup;
             }
             holder.vibrate = (CheckBox) view.findViewById(R.id.vibrate_onoff);
+            holder.increasingVolume = (CheckBox) view.findViewById(R.id.increasing_volume_onoff);
             holder.collapse = (ViewGroup) view.findViewById(R.id.collapse);
             holder.ringtone = (TextView) view.findViewById(R.id.choose_ringtone);
 
@@ -880,6 +882,30 @@ public class AlarmClock extends Activity implements LoaderManager.LoaderCallback
                         itemHolder.vibrate.setTextColor(mColorDim);
                     }
                     alarm.vibrate = checked;
+                    asyncUpdateAlarm(alarm, false);
+                }
+            });
+
+            itemHolder.increasingVolume.setVisibility(View.VISIBLE);
+            itemHolder.increasingVolume.setChecked(alarm.increasingVolume);
+            itemHolder.increasingVolume.setTextColor(
+                    alarm.increasingVolume ? mColorLit : mColorDim);
+            itemHolder.increasingVolume.setOnLongClickListener(mLongClickListener);
+
+            itemHolder.increasingVolume.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final boolean checked = ((CheckBox) v).isChecked();
+                    //When action mode is on - simulate long click
+                    if (doLongClick(v)) {
+                        return;
+                    }
+                    if (checked) {
+                        itemHolder.increasingVolume.setTextColor(mColorLit);
+                    } else {
+                        itemHolder.increasingVolume.setTextColor(mColorDim);
+                    }
+                    alarm.increasingVolume = checked;
                     asyncUpdateAlarm(alarm, false);
                 }
             });
