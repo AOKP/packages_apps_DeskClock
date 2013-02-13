@@ -29,6 +29,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.PowerManager;
 import android.preference.PreferenceManager;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -122,8 +123,15 @@ public class AlarmAlertFullScreen extends Activity implements GlowPadView.OnTrig
         mVolumeBehavior = Integer.parseInt(vol);
 
         final Window win = getWindow();
-        win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+        win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
+        // Read unlock state dismiss preference
+        boolean mUnlockOnDismiss =
+                PreferenceManager.getDefaultSharedPreferences(this)
+                .getBoolean(SettingsActivity.KEY_UNLOCK_ON_DISMISS, false);
+        if (!mUnlockOnDismiss) {
+                win.addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+        }
+
         // Turn on the screen unless we are being launched from the AlarmAlert
         // subclass as a result of the screen turning off.
         if (!getIntent().getBooleanExtra(SCREEN_OFF, false)) {

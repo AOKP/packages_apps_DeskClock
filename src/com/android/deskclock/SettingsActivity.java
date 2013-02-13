@@ -75,6 +75,8 @@ public class SettingsActivity extends PreferenceActivity
             "digital_clock_date_color";
     static final String KEY_DIGITAL_CLOCK_ALARM_COLOR =
             "digital_clock_alarm_color";
+    static final String KEY_UNLOCK_ON_DISMISS =
+            "unlock_on_dismiss";
 
     public static final String DEFAULT_VOLUME_BEHAVIOR = "0";
 
@@ -240,6 +242,9 @@ public class SettingsActivity extends PreferenceActivity
         listPref = (ListPreference) findPreference(KEY_VOLUME_BUTTONS);
         listPref.setSummary(listPref.getEntry());
         listPref.setOnPreferenceChangeListener(this);
+
+        CheckBoxPreference unlockOnDismiss = (CheckBoxPreference) findPreference(KEY_UNLOCK_ON_DISMISS);
+        unlockOnDismiss.setOnPreferenceChangeListener(this);
 
         CheckBoxPreference hideStatusbarIcon = (CheckBoxPreference) findPreference(KEY_SHOW_STATUS_BAR_ICON);
         hideStatusbarIcon.setOnPreferenceChangeListener(this);

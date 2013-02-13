@@ -185,6 +185,12 @@
     <!-- Setting summary for showing/hiding the alarm statusbar icon -->
     <string name="show_status_bar_icon_summary">Show an icon in the status bar when an alarm is set</string>
 
+    <!-- Setting title for unlock on dismissal of alarm -->
+    <string name="unlock_on_dismiss_title">Unlock on Alarm Dismiss</string>
+
+    <!-- Setting summary for unlock on dismissal of alarm -->
+    <string name="unlock_on_dismiss_summary">If checked, device will unlock after dismissal of alarm from lockscreen</string>
+
     <!-- Setting title for changing the snooze duration. -->
     <string name="snooze_duration_title">Snooze length</string>
 
