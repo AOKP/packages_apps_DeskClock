@@ -147,6 +147,13 @@
     <string name="sw_share_main" msgid="7703563468204234405">"Saatim: <xliff:g id="TIME">%s</xliff:g>"</string>
     <string name="sw_share_laps" msgid="614390674795945007">"Tur süreleri:"</string>
     <string name="sw_notification_lap_number" msgid="3535420316052647126">"<xliff:g id="NUMBER">%d</xliff:g>. tur"</string>
+  <string-array name="stopwatch_format_set">
+    <item msgid="7855304148648938406">"<xliff:g id="M">%2$d</xliff:g>d <xliff:g id="S">%3$02d</xliff:g>s.<xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="3964356050933061913">"<xliff:g id="M">%2$02d</xliff:g>d <xliff:g id="S">%3$02d</xliff:g>s.<xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="4906928997138522728">"<xliff:g id="H">%1$d</xliff:g>s <xliff:g id="M">%2$02d</xliff:g>d <xliff:g id="S">%3$02d</xliff:g>s.<xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="1167529664702951052">"<xliff:g id="H">%1$02d</xliff:g>s <xliff:g id="M">%2$02d</xliff:g>d <xliff:g id="S">%3$02d</xliff:g>s.<xliff:g id="D">%4$02d</xliff:g>"</item>
+    <item msgid="4383974684898411623">"<xliff:g id="H">%1$03d</xliff:g>s <xliff:g id="M">%2$02d</xliff:g>d <xliff:g id="S">%3$02d</xliff:g>s.<xliff:g id="D">%4$02d</xliff:g>"</item>
+  </string-array>
   <plurals name="Nhours_description">
     <item quantity="one" msgid="371227238759147245">"1 saat"</item>
     <item quantity="other" msgid="7018184076091344797">"<xliff:g id="NUMBER">%d</xliff:g> saat"</item>
@@ -322,6 +329,5 @@
   </plurals>
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Bu zamanlayıcı silinsin mi?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Bu şehir kaldırılsın mı?"</string>
-    <string name="widget_loading_ms" msgid="790841709484678848">"Yükleniyor"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Dijital saat"</string>
 </resources>
