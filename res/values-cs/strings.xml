@@ -347,5 +347,7 @@
     <string name="clock_alarm_color_title">Barva budíku</string>
     <string name="clock_alarm_color_summary">Nastavit barvu budíku digitálních hodin.</string>
     <string name="show_status_bar_icon_title">Zobrazit ikonu</string>
-    <string name="show_status_bar_icon_summary">Zobrazit ikonu v notifikační liště když je budík nastaven</string>
+    <string name="show_status_bar_icon_summary">Zobrazit ikonu v notifikační liště když je nastaven budík</string>
+    <string name="unlock_on_dismiss_title">Odemknout při zrušení budíku</string>
+    <string name="unlock_on_dismiss_summary">Pokud je zatrženo, po zrušení budíku ze zamknuté obrazovky dojde k odemčení zařízení</string>
 </resources>
