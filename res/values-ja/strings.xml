@@ -67,8 +67,29 @@
     <string name="day_concat" msgid="971998564991636532">"、 "</string>
     <string name="clock_instructions" msgid="2656876819515011590">"時計の選択"</string>
     <string name="analog_gadget" msgid="1670505720837152766">"アナログ時計"</string>
+
+    <!-- Label for AOKP clock gadget, shown in list of all gadgets -->
+    <string name="analog_aokp_gadget">AOKP時計</string>
+
+    <!-- Appears at the top of the AOKP Clock Picker screen: Tell user to
+         select a clock Dial to display -->
+    <string name="clock_dial_instructions">時計のダイヤルを選択</string>
+
     <string name="help" msgid="7786263119482654015">"ヘルプ"</string>
     <string name="settings" msgid="5849739030579520686">"設定"</string>
+
+    <!-- Setting title for showing/hiding the alarm status bar icon -->
+    <string name="show_status_bar_icon_title">アイコンを表示</string>
+
+    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
+    <string name="show_status_bar_icon_summary">アラームが設定されているとき、ステータスバーにアイコンを表示する</string>
+
+    <!-- Setting title for unlock on dismissal of alarm -->
+    <string name="unlock_on_dismiss_title">アラーム停止でアンロック</string>
+
+    <!-- Setting summary for unlock on dismissal of alarm -->
+    <string name="unlock_on_dismiss_summary">アラームを停止させたときに端末をアンロックする</string>
+
     <string name="snooze_duration_title" msgid="1097309861110780483">"スヌーズの長さ"</string>
   <plurals name="snooze_duration">
     <item quantity="one" msgid="7406963706727564418">"1分"</item>
@@ -120,6 +141,10 @@
     <string name="loading_ringtone" msgid="6523322777415268044">"着信音を読み込み中..."</string>
     <string name="timer_ring_service_desc" msgid="2620214305660322415">"時計で設定したタイマー用のサウンド再生サービスです。"</string>
     <string name="control_set_alarm" msgid="2194676418924016327">"アラームを設定"</string>
+
+    <!-- Label on the main screen control used to set alarm when there is already an existing alarm [CHAR LIMIT=30]-->
+    <string name="control_set_alarm_with_existing"><xliff:g id="time">%s</xliff:g></string>
+
     <!-- no translation found for control_set_alarm_with_existing (3359285346655630660) -->
     <skip />
     <string name="menu_timer" msgid="6459070074762877114">"タイマー"</string>
@@ -330,19 +355,6 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"このタイマーを削除しますか？"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"この都市を削除しますか？"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"デジタルクロック"</string>
-
-    <!-- Label for AOKP clock gadget, shown in list of all gadgets -->
-    <string name="analog_aokp_gadget">AOKP時計</string>
-
-    <!-- Appears at the top of the AOKP Clock Picker screen: Tell user to
-         select a clock Dial to display -->
-    <string name="clock_dial_instructions">時計のダイヤルを選択</string>
-
-    <!-- Setting title for showing/hiding the alarm status bar icon -->
-    <string name="show_status_bar_icon_title">アイコンを表示</string>
-
-    <!-- Setting summary for showing/hiding the alarm statusbar icon -->
-    <string name="show_status_bar_icon_summary">アラームが設定されているとき、ステータスバーにアイコンを表示する</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">色選択</string>
