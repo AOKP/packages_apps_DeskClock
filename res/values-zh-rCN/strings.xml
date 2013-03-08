@@ -71,6 +71,8 @@
     <string name="settings" msgid="5849739030579520686">"设置"</string>
     <string name="show_status_bar_icon_title">显示图标</string>
     <string name="show_status_bar_icon_summary">当设有闹钟时在状态栏显示图标</string>
+    <string name="unlock_on_dismiss_title">闹钟停止时解锁</string>
+    <string name="unlock_on_dismiss_summary">选中后设备将在闹钟被停止时解锁屏幕</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"暂停时长"</string>
   <plurals name="snooze_duration">
     <item quantity="one" msgid="7406963706727564418">"1 分钟"</item>
