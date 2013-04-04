@@ -85,11 +85,11 @@
   </plurals>
     <string name="flip_action_title">翻转动作</string>
     <string name="flip_action_dialog_title">翻转动作</string>
-    <string name="flip_action_summary">将手机反转向下时<xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary">将设备反转向下时<xliff:g id="action">%s</xliff:g></string>
   <string-array name="flip_action_entries">
     <item>什么都不做</item>
     <item>暂停闹钟</item>
-    <item>关闭闹钟</item>
+    <item>停止闹钟</item>
   </string-array>
     <string name="auto_silence_title" msgid="2012754009554434544">"闹铃时长"</string>
     <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> 分钟"</string>
@@ -214,9 +214,9 @@
     <item msgid="917900462224167608">"指针"</item>
     <item msgid="8483930821046925592">"数字"</item>
   </string-array>
-    <string name="shake_title">摇动</string>
-    <string name="shake_summary">摇动将 <xliff:g id="action">%s</xliff:g></string>
-    <string name="shake_dialog">“摇动设备将……”</string>
+    <string name="shake_title">摇动动作</string>
+    <string name="shake_summary">摇动设备将<xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_dialog">摇动动作</string>
     <string name="automatic_home_clock" msgid="6274174710735449252">"自动显示家中时间"</string>
     <string name="automatic_home_clock_summary" msgid="6020476321040807273">"在其他时区旅行时显示家中时间"</string>
     <string name="home_time_zone" msgid="9199730676287974501">"家中时区"</string>
