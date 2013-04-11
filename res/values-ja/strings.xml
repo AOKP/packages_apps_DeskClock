@@ -89,10 +89,10 @@
     <string name="show_status_bar_icon_summary">アラームが設定されているとき、ステータスバーにアイコンを表示する</string>
 
     <!-- Setting title for unlock on dismissal of alarm -->
-    <string name="unlock_on_dismiss_title">アラーム停止でアンロック</string>
+    <string name="unlock_on_dismiss_title">アラーム停止でロック維持</string>
 
     <!-- Setting summary for unlock on dismissal of alarm -->
-    <string name="unlock_on_dismiss_summary">アラームを停止させたときに端末をアンロックする</string>
+    <string name="unlock_on_dismiss_summary">ロック画面からアラームを停止したとき、端末ロック状態を維持する</string>
 
     <string name="snooze_duration_title" msgid="1097309861110780483">"スヌーズの長さ"</string>
   <plurals name="snooze_duration">
