@@ -72,23 +72,23 @@
     <string name="settings" msgid="5849739030579520686">"Настройки"</string>
     <string name="snooze_duration_title" msgid="1097309861110780483">"Интервал повтора сигнала"</string>
   <plurals name="snooze_duration">
-    <item quantity="one" msgid="7406963706727564418">"1 мин."</item>
-    <item quantity="other" msgid="568504136093419703">"<xliff:g id="NUMBER">%d</xliff:g> мин."</item>
+    <item quantity="one" msgid="7406963706727564418">"1 мин."</item>
+    <item quantity="other" msgid="568504136093419703">"<xliff:g id="NUMBER">%d</xliff:g> мин."</item>
   </plurals>
   <plurals name="snooze_picker_label">
     <item quantity="one" msgid="3783171637798575068">"мин."</item>
     <item quantity="other" msgid="1304056759541595077">"мин."</item>
   </plurals>
     <string name="auto_silence_title" msgid="2012754009554434544">"Автовыключение"</string>
-    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> мин."</string>
+    <string name="auto_silence_summary" msgid="7028508740659733028">"<xliff:g id="MINUTES">%d</xliff:g> мин."</string>
     <string name="auto_silence_never" msgid="4821982647348750809">"Отключено"</string>
   <string-array name="auto_silence_entries">
-    <item msgid="3693401222993867634">"5 мин."</item>
-    <item msgid="3663730603519549990">"10 мин."</item>
-    <item msgid="1385481095199681200">"15 мин."</item>
-    <item msgid="420479821767342125">"20 мин."</item>
-    <item msgid="2107936130151066746">"25 мин."</item>
-    <item msgid="7219791437023378544">"30 мин."</item>
+    <item msgid="3693401222993867634">"5 мин."</item>
+    <item msgid="3663730603519549990">"10 мин."</item>
+    <item msgid="1385481095199681200">"15 мин."</item>
+    <item msgid="420479821767342125">"20 мин."</item>
+    <item msgid="2107936130151066746">"25 мин."</item>
+    <item msgid="7219791437023378544">"30 мин."</item>
     <item msgid="4278641338024561333">"Никогда"</item>
   </string-array>
     <string name="done" msgid="6509722361933858451">"Готово"</string>
@@ -156,16 +156,16 @@
     <item msgid="4383974684898411623">"<xliff:g id="H">%1$03d</xliff:g>ч <xliff:g id="M">%2$02d</xliff:g>м <xliff:g id="S">%3$02d</xliff:g>с.<xliff:g id="D">%4$02d</xliff:g>"</item>
   </string-array>
   <plurals name="Nhours_description">
-    <item quantity="one" msgid="371227238759147245">"1 ч."</item>
-    <item quantity="other" msgid="7018184076091344797">"<xliff:g id="NUMBER">%d</xliff:g> ч."</item>
+    <item quantity="one" msgid="371227238759147245">"1 ч."</item>
+    <item quantity="other" msgid="7018184076091344797">"<xliff:g id="NUMBER">%d</xliff:g> ч."</item>
   </plurals>
   <plurals name="Nminutes_description">
-    <item quantity="one" msgid="1001391305885322059">"1 мин."</item>
-    <item quantity="other" msgid="6948360065351547776">"<xliff:g id="NUMBER">%d</xliff:g> мин."</item>
+    <item quantity="one" msgid="1001391305885322059">"1 мин."</item>
+    <item quantity="other" msgid="6948360065351547776">"<xliff:g id="NUMBER">%d</xliff:g> мин."</item>
   </plurals>
   <plurals name="Nseconds_description">
-    <item quantity="one" msgid="6589853086641485725">"1 сек."</item>
-    <item quantity="other" msgid="7583230315175387547">"<xliff:g id="NUMBER">%d</xliff:g> сек."</item>
+    <item quantity="one" msgid="6589853086641485725">"1 сек."</item>
+    <item quantity="other" msgid="7583230315175387547">"<xliff:g id="NUMBER">%d</xliff:g> сек."</item>
   </plurals>
     <string name="timer_add_timer" msgid="862733633862574752">"Добавить таймер"</string>
     <string name="timer_start" msgid="6158486445614356442">"Старт"</string>
@@ -183,13 +183,13 @@
     <item msgid="7916250650982813737">"Уф!"</item>
     <item msgid="6836603904515182333">"L33t раз(а)"</item>
     <item msgid="7508085100680861631">"Вот это скорость!"</item>
-    <item msgid="5961245252909589573">"Искажение времени – то, что нам нужно!"</item>
+    <item msgid="5961245252909589573">"Искажение времени – то, что нам нужно!"</item>
     <item msgid="5211891900854545940">"Прыжок влево"</item>
     <item msgid="9071353477103826053">"Вы времени даром не теряете!"</item>
     <item msgid="3785193933691117181">"Быстрее света!"</item>
   </string-array>
   <plurals name="timers_num">
-    <item quantity="one" msgid="6764708652976799977">"1 мин."</item>
+    <item quantity="one" msgid="6764708652976799977">"1 мин."</item>
     <item quantity="other" msgid="3799129667336330616">"Таймеров: <xliff:g id="NUMBER">%d</xliff:g>"</item>
   </plurals>
     <string name="home_label" msgid="4436139365695453870">"Главная страница"</string>
@@ -331,4 +331,31 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Удалить этот таймер?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Удалить этот город?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Часы"</string>
+    <string name="analog_aokp_gadget">AOKP часы</string>
+    <string name="clock_dial_instructions">Выберите цифровые часы</string>
+    <string name="show_status_bar_icon_title">Показать значок</string>
+    <string name="show_status_bar_icon_summary">Показать значок в строке состояния, если будильник установлен</string>
+    <string name="unlock_on_dismiss_title">Отменить разблокировку по тревоге</string>
+    <string name="unlock_on_dismiss_summary">Если флажок установлен, устройство останется заблокированным после отмены  сигнализации из экрана блокировки.</string>
+    <string name="flip_action_title">Переворот экраном вниз</string>
+    <string name="flip_action_dialog_title">Переворот экраном вниз</string>
+    <string name="flip_action_summary">При переворачивании телефона <xliff:g id="action"> %s </xliff:g></string>
+    <string name="control_set_alarm_with_existing"><xliff:g id="time">%s</xliff:g></string>
+    <string name="shake_title">Встряхивание</string>
+    <string name="shake_summary">Встряхнуть для <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_dialog">Встряхнуть устройство для\u2026</string>
+    <string name="dialog_color_picker">Палитра</string>
+    <string name="press_color_to_apply">Нажмите цвет для выбора</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">\#FF000000</string>
+    <string name="set">Установить</string>
+    <string name="ics_color">Holo</string>
+    <string name="clock_time_color_title">Цвет времени</string>
+    <string name="clock_time_color_summary">Выберите цвет для времени</string>
+    <string name="clock_date_color_title">Цвет даты</string>
+    <string name="clock_date_color_summary">Выберите цвет для даты</string>
+    <string name="clock_alarm_color_title">Цвет часов</string>
+    <string name="clock_alarm_color_summary">Выберите цвет для будильника</string>
 </resources>
