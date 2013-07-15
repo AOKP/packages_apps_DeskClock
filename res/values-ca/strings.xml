@@ -330,4 +330,30 @@
     <string name="timer_delete_confirmation" msgid="2815524107015816453">"Vols suprimir aquest temporitzador?"</string>
     <string name="city_delete_confirmation" msgid="1783441538785676299">"Vols eliminar aquesta ciutat?"</string>
     <string name="digital_gadget" msgid="2326954556720571358">"Rellotge digital"</string>
+    <string name="alarm_increasing_volume">Volum progressiu</string>
+    <string name="analog_aokp_gadget">Rellotge d\'AOKP</string>
+    <string name="clock_dial_instructions">Trieu un dial de rellotge</string>
+    <string name="show_status_bar_icon_title">Mostra la icona</string>
+    <string name="show_status_bar_icon_summary">Mostra una icona a la barra d\'estat quan s\'estableix una alarma</string>
+    <string name="unlock_on_dismiss_title">Desbloqueja en apagar l\'alarma</string>
+    <string name="unlock_on_dismiss_summary">Si es marca, el dispositiu seguirà bloquejat després d\'apagar l\'alarma des de la pantalla de bloqueig</string>
+    <string name="flip_action_title">Acció en girar</string>
+    <string name="flip_action_dialog_title">Acció en girar</string>
+    <string name="control_set_alarm_with_existing"><xliff:g id="time">%s</xliff:g></string>
+    <string name="shake_title">Sacsejat</string>
+    <string name="shake_dialog">Sacsegeu el dispositiu per a\u2026</string>
+    <string name="dialog_color_picker">Selector de colors</string>
+    <string name="press_color_to_apply">Premeu al color per aplicar</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">Estableix</string>
+    <string name="ics_color">Holo</string>
+    <string name="clock_time_color_title">Color de l\'hora</string>
+    <string name="clock_time_color_summary">Estableix el color de l\'hora del rellotge digital.</string>
+    <string name="clock_date_color_title">Color de la data</string>
+    <string name="clock_date_color_summary">Estableix el color de la data del rellotge digital.</string>
+    <string name="clock_alarm_color_title">Color de l\'alarma</string>
+    <string name="clock_alarm_color_summary">Estableix el color de l\'alarma del rellotge digital.</string>
 </resources>
