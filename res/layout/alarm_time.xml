@@ -191,7 +191,7 @@
             <TextView
                 android:id="@+id/choose_ringtone"
                 android:layout_height="match_parent"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_marginRight="16dp"
                 android:layout_marginEnd="16dp"
@@ -204,7 +204,6 @@
                 android:scrollHorizontally="true"
                 android:singleLine="true"
                 android:marqueeRepeatLimit="marquee_forever"
-                android:drawableLeft="@drawable/ic_ringtone"
                 android:drawableStart="@drawable/ic_ringtone"
                 android:drawablePadding="2dp"
                 />
@@ -215,6 +214,7 @@
                 android:textColor="@color/clock_gray"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/choose_ringtone"
                 android:layout_gravity="center_vertical|end"
                 style="@style/body"/>
             <CheckBox
