@@ -514,6 +514,12 @@ public class AlarmAlertFullScreen extends Activity implements GlowPadView.OnTrig
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        mPingEnabled = false;
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         if (LOG) Log.v("AlarmAlertFullScreen.onDestroy()");
