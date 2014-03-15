@@ -19,5 +19,5 @@
 -->
 <resources>
   <string name="show_status_bar_icon_title">Показывать значок</string>
-  <string name="show_status_bar_icon_summary">Показать значок в строке состояния если будильник ключен</string>
+  <string name="show_status_bar_icon_summary">Показывать значок в строке состояния, если будильник установлен</string>
 </resources>
