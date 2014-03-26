@@ -19,5 +19,5 @@
 -->
 <resources>
   <string name="show_status_bar_icon_title">Simgeyi göster</string>
-  <string name="show_status_bar_icon_summary">Alarm ayarlandığında durum çubuğunda bir simge göster</string>
+  <string name="show_status_bar_icon_summary">Alarm ayarlandığında durum çubuğunda bir simge gösterir</string>
 </resources>
