@@ -23,4 +23,31 @@
 
     <!-- Setting summary for showing/hiding the alarm statusbar icon -->
     <string name="show_status_bar_icon_summary">Show an icon in the status bar when an alarm is set</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Flip action</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title" product="tablet">Flip the tablet to\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Flip the phone to\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary" product="tablet">Flipping the tablet down will <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Flipping the phone down will <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Setting title for the shake action setting. -->
+    <string name="shake_action_title">Shake action</string>
+
+    <!-- Dialog title for the shake action setting. -->
+    <string name="shake_action_dialog_title" product="tablet">Shake the tablet to\u2026</string>
+    <string name="shake_action_dialog_title" product="default">Shake the phone to\u2026</string>
+
+    <!-- Setting summary for the shake action setting. -->
+    <string name="shake_action_summary" product="tablet">Shaking the tablet will <xliff:g id="action">%s</xliff:g></string>
+    <string name="shake_action_summary" product="default">Shaking the phone will <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Summary texts for shake and flip actions -->
+    <string name="action_summary_do_nothing">do nothing</string>
+    <string name="action_summary_snooze">snooze alarm</string>
+    <string name="action_summary_dismiss">dismiss alarm</string>
 </resources>
