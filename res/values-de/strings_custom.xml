@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">Zeige Symbol</string>
   <string name="show_status_bar_icon_summary">Zeige ein Symbol in der Statusleiste, wenn ein Alarm eingestellt ist</string>
 </resources>

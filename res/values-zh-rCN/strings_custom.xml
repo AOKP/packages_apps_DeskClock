@@ -17,7 +17,20 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">显示图标</string>
   <string name="show_status_bar_icon_summary">当设有闹钟时在状态栏显示图标</string>
+  <string name="flip_action_title">翻转动作</string>
+  <string name="flip_action_dialog_title" product="tablet">翻转平板至\u2026</string>
+  <string name="flip_action_dialog_title" product="default">翻转手机至\u2026</string>
+  <string name="flip_action_summary" product="tablet">翻转平板将会<xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">翻转手机将会<xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_title">摇动动作</string>
+  <string name="shake_action_dialog_title" product="tablet">摇动平板至\u2026</string>
+  <string name="shake_action_dialog_title" product="default">摇动手机至\u2026</string>
+  <string name="shake_action_summary" product="tablet">摇动平板将会<xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">摇动手机将会<xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_do_nothing">什么都不做</string>
+  <string name="action_summary_snooze">暂停报警</string>
+  <string name="action_summary_dismiss">解除报警</string>
 </resources>

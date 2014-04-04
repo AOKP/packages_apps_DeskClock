@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">Εμφάνιση εικονιδίου</string>
   <string name="show_status_bar_icon_summary">Εμφάνιση εικονιδίου στη μπάρα κατάστασης όταν έχει οριστεί ώρα αφύπνισης</string>
 </resources>

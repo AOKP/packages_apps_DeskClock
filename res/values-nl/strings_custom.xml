@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">Statusbalkmelding</string>
   <string name="show_status_bar_icon_summary">Pictogram tonen in de statusbalk als een alarm is ingesteld</string>
 </resources>

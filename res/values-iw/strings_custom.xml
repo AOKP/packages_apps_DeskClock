@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">הראה צלמית</string>
   <string name="show_status_bar_icon_summary">הראה צלמית בשורת המצב כאשר מוגדרת התראה</string>
 </resources>
