@@ -20,6 +20,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">Simgeyi göster</string>
   <string name="show_status_bar_icon_summary">Alarm ayarlandığında durum çubuğunda bir simge gösterir</string>
+  <string name="flip_action_title">Çevirme İşlevi</string>
+  <string name="shake_action_title">Sallama İşlevi</string>
+  <string name="shake_action_summary" product="tablet">Tableti sallamak <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Telefonu sallamak <xliff:g id="action">%s</xliff:g></string>
   <string name="action_summary_do_nothing">bir şey yapma</string>
   <string name="action_summary_snooze">alarmı ertele</string>
   <string name="action_summary_dismiss">alarmı kapat</string>

@@ -20,4 +20,17 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="show_status_bar_icon_title">Visa ikon</string>
   <string name="show_status_bar_icon_summary">Visa en ikon i statusfältet när ett larm är inställt</string>
+  <string name="flip_action_title">Vändhändelse</string>
+  <string name="flip_action_dialog_title" product="tablet">Vänd plattan till \u2026</string>
+  <string name="flip_action_dialog_title" product="default">Vänd telefonen till \u2026</string>
+  <string name="flip_action_summary" product="tablet">Att vända på plattan resulterar i <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Att vända på telefonen resulterar i <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_title">Skakhändelse</string>
+  <string name="shake_action_dialog_title" product="tablet">Skaka plattan till \u2026</string>
+  <string name="shake_action_dialog_title" product="default">Skaka telefonen till \u2026</string>
+  <string name="shake_action_summary" product="tablet">Att skaka plattan resulterar i <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Att skaka telefonen resulterar i <xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_do_nothing">Gör inget</string>
+  <string name="action_summary_snooze">Snoosalarm</string>
+  <string name="action_summary_dismiss">Slå av alarm</string>
 </resources>
