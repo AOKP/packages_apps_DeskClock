@@ -17,4 +17,20 @@
  * limitations under the License.
  */
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"/>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="show_status_bar_icon_title">Hiện biểu tượng</string>
+  <string name="show_status_bar_icon_summary">Hiện một biểu tượng trong thanh trạng thái khi đặt một báo thức</string>
+  <string name="flip_action_title">Hành động lật</string>
+  <string name="flip_action_dialog_title" product="tablet">Lật m.tính bảng để\u2026</string>
+  <string name="flip_action_dialog_title" product="default">Lật điện thoại để\u2026</string>
+  <string name="flip_action_summary" product="tablet">Lật m.tính bảng xuống sẽ <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_summary" product="default">Lật điện thoại xuống sẽ <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_title">Hành động lắc</string>
+  <string name="shake_action_dialog_title" product="tablet">Lắc m.tính bảng để\u2026</string>
+  <string name="shake_action_dialog_title" product="default">Lắc điện thoại để\u2026</string>
+  <string name="shake_action_summary" product="tablet">Lắc m.tính bảng sẽ <xliff:g id="action">%s</xliff:g></string>
+  <string name="shake_action_summary" product="default">Lắc điện thoại sẽ <xliff:g id="action">%s</xliff:g></string>
+  <string name="action_summary_do_nothing">không làm gì cả</string>
+  <string name="action_summary_snooze">tạm dừng báo thức</string>
+  <string name="action_summary_dismiss">bỏ qua báo thức</string>
+</resources>

@@ -30,7 +30,7 @@
   <string name="shake_action_dialog_title" product="default">Skaka telefonen till \u2026</string>
   <string name="shake_action_summary" product="tablet">Att skaka plattan resulterar i <xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_summary" product="default">Att skaka telefonen resulterar i <xliff:g id="action">%s</xliff:g></string>
-  <string name="action_summary_do_nothing">Gör inget</string>
-  <string name="action_summary_snooze">Snoosalarm</string>
-  <string name="action_summary_dismiss">Slå av alarm</string>
+  <string name="action_summary_do_nothing">gör inget</string>
+  <string name="action_summary_snooze">snoose alarm</string>
+  <string name="action_summary_dismiss">avfärda alarm</string>
 </resources>
