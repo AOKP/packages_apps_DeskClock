@@ -26,4 +26,11 @@
   <string name="flip_action_summary" product="tablet">De tablet omdraaien zal <xliff:g id="action">%s</xliff:g></string>
   <string name="flip_action_summary" product="default">Het omdraaien van uw telefoon zal<xliff:g id="action">%s</xliff:g></string>
   <string name="shake_action_title">Schudactie</string>
+  <string name="shake_action_dialog_title" product="tablet">De tablet schudden</string>
+  <string name="shake_action_dialog_title" product="default">De telefoon schudden</string>
+  <string name="shake_action_summary" product="tablet">De tablet zal <xliff:g id="action">%s</xliff:g> als u schudt</string>
+  <string name="shake_action_summary" product="default">De telefoon zal <xliff:g id="action">%s</xliff:g> als u schudt</string>
+  <string name="action_summary_do_nothing">niets doen</string>
+  <string name="action_summary_snooze">snoozen</string>
+  <string name="action_summary_dismiss">het alarm uitschakelen</string>
 </resources>
