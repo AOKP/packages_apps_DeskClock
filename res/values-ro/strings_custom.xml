@@ -17,4 +17,13 @@
  * limitations under the License.
  */
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"/>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="flip_action_title">Acțiunea de rotire</string>
+  <string name="flip_action_dialog_title" product="tablet">Rotește tableta la\u2026</string>
+  <string name="flip_action_dialog_title" product="default">Rotește telefonul la\u2026</string>
+  <string name="shake_action_title">Acțiunea de agitare</string>
+  <string name="shake_action_dialog_title" product="tablet">Agitați tableta la\u2026</string>
+  <string name="shake_action_dialog_title" product="default">Agitați telefonul la\u2026</string>
+  <string name="action_summary_snooze">amânare alarmă</string>
+  <string name="action_summary_dismiss">respingere alarmă</string>
+</resources>
